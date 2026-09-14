@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.container {
+    width: 700px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.subtitle {
+    text-align: center;
+    color: gray;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    height: 120px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
+
+.skill,
+.match,
+.missing {
+    display: inline-block;
+    padding: 7px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: #ddd;
+}
+
+.score {
+    margin-top: 25px;
+    font-size: 25px;
+    text-align: center;
+}
+
+.suggestion {
+    text-align: center;
+    font-weight: bold;
+}

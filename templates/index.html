@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>AI Resume Analyzer</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static',
+          filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>AI Resume Analyzer</h1>
+
+    <p class="subtitle">
+        Resume & Job Matching System
+    </p>
+
+
+    <form method="POST">
+
+        <label>Enter Your Resume</label>
+
+        <textarea
+            name="resume"
+            placeholder="Example: I know Python, Java, SQL, HTML and Machine Learning."
+            required></textarea>
+
+
+        <label>Enter Job Description</label>
+
+        <textarea
+            name="job"
+            placeholder="Example: Required skills are Python, SQL, Machine Learning and AWS."
+            required></textarea>
+
+
+        <button type="submit">
+            Analyze Resume
+        </button>
+
+    </form>
+
+
+    {% if result %}
+
+    <div class="result">
+
+        <h2>Analysis Result</h2>
+
+
+        <h3>Resume Skills</h3>
+
+        <p>
+        {% for skill in result.resume_skills %}
+            <span class="skill">{{ skill }}</span>
+        {% endfor %}
+        </p>
+
+
+        <h3>Required Skills</h3>
+
+        <p>
+        {% for skill in result.job_skills %}
+            <span class="skill">{{ skill }}</span>
+        {% endfor %}
+        </p>
+
+
+        <h3>Matching Skills</h3>
+
+        <p>
+        {% for skill in result.matching %}
+            <span class="match">{{ skill }}</span>
+        {% endfor %}
+        </p>
+
+
+        <h3>Missing Skills</h3>
+
+        <p>
+        {% for skill in result.missing %}
+            <span class="missing">{{ skill }}</span>
+        {% endfor %}
+        </p>
+
+
+        <div class="score">
+
+            Job Match:
+            <strong>
+                {{ result.match }}%
+            </strong>
+
+        </div>
+
+
+        <p class="suggestion">
+            {{ result.suggestion }}
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</div>
+
+</body>
+
+</html>
