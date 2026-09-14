@@ -19,7 +19,11 @@ It then:
 * Finds missing skills
 * Calculates the job match percentage
 * Provides a simple suggestion
+## 📸 Application Screenshot
 
+Here is a screenshot of the working AI Resume Analyzer:
+
+![AI Resume Analyzer](screenshots/RESUME_CHECKING.jpg)
 ## ✨ Features
 
 * 📝 Enter resume details
