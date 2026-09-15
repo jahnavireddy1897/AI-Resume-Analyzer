@@ -17,7 +17,7 @@ skills = [
     "django",
     "aws",
     "mongodb",
-    "git"
+    "git",
     "sap"
 ]
 
