@@ -18,6 +18,7 @@ skills = [
     "aws",
     "mongodb",
     "git"
+    "sap"
 ]
 
 
